@@ -15,12 +15,12 @@ spec:
         app: python-app
     spec:
       containers:
-      - image: shrz/python-app
-        name: python-app
-        volumeMounts:
-        - mountPath: /var/python-app
-          name: python-app-mount
+        - image: ghcr.io/2022-4400-exp/4420-python-app:b1c8eb4357290f2fefe4baef75a7f5798baa6768
+          name: python-app
+          volumeMounts:
+            - mountPath: /var/python-app
+              name: python-app-mount
       volumes:
-      - name: python-app-mount
-        persistentVolumeClaim:
-          claimName: python-app-data
+        - name: python-app-mount
+          persistentVolumeClaim:
+            claimName: python-app-data
